@@ -1,9 +1,14 @@
 package infinitedog.frisky.events;
 
+import infinitedog.frisky.exceptions.InputEventException;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Input;
 import org.newdawn.slick.geom.Rectangle;
 
+/**
+ * Class which represent keyboard and mouse events.
+ * @author InfiniteDog
+ */
 public class InputEvent extends Event {
 
     public static final int KEYBOARD = 0;
@@ -31,7 +36,7 @@ public class InputEvent extends Event {
     }
  
     @Override
-    public boolean isHappening(GameContainer gc) {
+    public boolean isHappening(GameContainer gc) throws InputEventException {
         //Check if is a timed event and timer is triggered
         boolean timed = (this.time == 0 || this.timer > this.time);
         
@@ -53,7 +58,7 @@ public class InputEvent extends Event {
                 Rectangle r = new Rectangle(input.getMouseX(), input.getMouseY(), 1, 1);
                 return r.intersects((Rectangle) data) && timed;
             default:
-                throw new UnsupportedOperationException("Not supported yet.");
+                throw new InputEventException();
         }
     }
     

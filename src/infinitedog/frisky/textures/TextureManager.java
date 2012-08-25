@@ -6,6 +6,10 @@ import java.util.logging.Logger;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
 
+/**
+ * Singleton for textures management.
+ * @author InfiniteDog
+ */
 public class TextureManager {
     private HashMap<String,Image> textures;
     

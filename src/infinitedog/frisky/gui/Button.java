@@ -6,6 +6,10 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.geom.Vector2f;
 
+/**
+ * Class for create a button.
+ * @author InfiniteDog
+ */
 public class Button extends Sprite {
     private static int id = 0;  
     private String label;

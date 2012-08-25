@@ -2,7 +2,10 @@ package infinitedog.frisky.physics;
 
 import infinitedog.frisky.entities.Entity;
 
-//Singleton
+/**
+ * Singleton for the phisics management.
+ * @author InfiniteDog
+ */
 public class PhysicsManager {
     
     //Static instance from PhysicsManager

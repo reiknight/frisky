@@ -6,6 +6,10 @@ import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
 
+/**
+ * Sprite basic class. Entities with which can be drawn.
+ * @author InfiniteDog
+ */
 public class Sprite extends Entity implements Serializable {
     protected transient Image image;
     

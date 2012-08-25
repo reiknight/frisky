@@ -1,10 +1,16 @@
 package infinitedog.frisky.events;
 
+import infinitedog.frisky.exceptions.EventException;
+import infinitedog.frisky.log.ManagerLog;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import org.newdawn.slick.GameContainer;
 
+/**
+ * Singleton for events management.
+ * @author InfiniteDog
+ */
 public class EventManager {
     
     //Static instance from EventManager
@@ -49,7 +55,12 @@ public class EventManager {
     }
     
     public boolean isHappening(String name, GameContainer gc) {
-        return events.get(name).isHappening(gc);
+        try {
+            return events.get(name).isHappening(gc);
+        } catch(EventException ee) {
+            ManagerLog.warning(ee);
+            return false;
+        }
     }
     
     public void update(GameContainer gc, int delta) {

@@ -1,12 +1,15 @@
 package infinitedog.frisky.entities;
 
 import java.io.Serializable;
-import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.geom.Vector2f;
 
+/**
+ * Abstract class, base of all Entities.
+ * @author InfiniteDog
+ */
 public abstract class Entity implements Serializable {
 
     //Rectangle for collision

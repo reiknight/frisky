@@ -4,6 +4,10 @@ import java.util.*;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 
+/**
+ * Singleton for entities management.
+ * @author InfiniteDog
+ */
 public class EntityManager {
 
     //Static instance from EntityManager
@@ -110,7 +114,7 @@ public class EntityManager {
         Iterator itr = c.iterator();
         while(itr.hasNext()) {
             Entity entity = (Entity) itr.next();
-            if(entity.getGroup() == name) {
+            if(entity.getGroup().equals(name)) {
                 result.add(entity);
             }
         }
@@ -123,7 +127,7 @@ public class EntityManager {
         Iterator itr = c.iterator();
         while(itr.hasNext()) {
             Entity entity = (Entity) itr.next();
-            if(entity.getGroup() == name) {
+            if(entity.getGroup().equals(name)) {
                 this.removeEntity(entity.name);
             }
         }

@@ -5,6 +5,10 @@ import org.newdawn.slick.Music;
 import org.newdawn.slick.SlickException;
 import org.newdawn.slick.Sound;
 
+/**
+ * Singleton for sounds management.
+ * @author InfiniteDog
+ */
 public class SoundManager {
     //Static instance from SoundManager
     private static SoundManager instance;
