@@ -12,12 +12,12 @@ public class Button extends Sprite {
     //Position relative to button
     private Vector2f labelPosition;
     
-    public Button(String textureName, String label, Vector2f labelPosition) {
+    public Button(String textureName, String name, String group, String label, Vector2f labelPosition) {
         this.setTexture(textureName);
         this.label = label;
         this.labelPosition = labelPosition;
-        //this.name = C.Entities.BULLET.name + id++;
-        //this.group = C.Groups.BUTTONS.name;
+        this.name = name;
+        this.group = group;
     }
     
     @Override
