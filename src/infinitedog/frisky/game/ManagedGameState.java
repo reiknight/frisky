@@ -5,7 +5,11 @@ import infinitedog.frisky.events.EventManager;
 import infinitedog.frisky.physics.PhysicsManager;
 import infinitedog.frisky.sounds.SoundManager;
 import infinitedog.frisky.textures.TextureManager;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.BasicGameState;
+import org.newdawn.slick.state.StateBasedGame;
 
 public class ManagedGameState extends BasicGameState {
     private int stateID = -1;
