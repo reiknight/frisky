@@ -5,6 +5,7 @@ import java.io.Serializable;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
 import org.newdawn.slick.Image;
+import org.newdawn.slick.geom.Vector2f;
 
 /**
  * Sprite basic class. Entities with which can be drawn.
@@ -42,5 +43,4 @@ public class Sprite extends Entity implements Serializable {
             image.draw(getX(), getY());
         }
     }
-    
 }
