@@ -34,4 +34,7 @@ public class PhysicsManager {
         return x.getR().intersects(s);  
     }
     
+    public double distance(Entity x, Entity y, int tileSize) {
+        return Math.abs(Math.pow(x.getX()/tileSize - y.getX()/tileSize,2) + Math.pow(x.getY()/tileSize - y.getY()/tileSize,2));
+    }
 }
