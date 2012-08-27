@@ -1,6 +1,7 @@
 package infinitedog.frisky.physics;
 
 import infinitedog.frisky.entities.Entity;
+import org.newdawn.slick.geom.Shape;
 
 /**
  * Singleton for the phisics management.
@@ -27,6 +28,10 @@ public class PhysicsManager {
     //TestCollisions
     public boolean testCollisionsEntity(Entity x, Entity y) {
         return x.getR().intersects(y.getR());
+    }
+    
+    public boolean testCollisionPolygon(Entity x, Shape s) {
+        return x.getR().intersects(s);  
     }
     
 }

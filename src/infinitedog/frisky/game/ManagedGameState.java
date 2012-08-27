@@ -2,17 +2,10 @@ package infinitedog.frisky.game;
 
 import infinitedog.frisky.entities.EntityManager;
 import infinitedog.frisky.events.EventManager;
-import infinitedog.frisky.events.InputEvent;
 import infinitedog.frisky.physics.PhysicsManager;
 import infinitedog.frisky.sounds.SoundManager;
 import infinitedog.frisky.textures.TextureManager;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.Input;
-import org.newdawn.slick.SlickException;
-import org.newdawn.slick.geom.Rectangle;
 import org.newdawn.slick.state.BasicGameState;
-import org.newdawn.slick.state.StateBasedGame;
 
 public class ManagedGameState extends BasicGameState {
     private int stateID = -1;
