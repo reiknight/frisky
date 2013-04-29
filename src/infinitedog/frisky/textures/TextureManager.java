@@ -5,6 +5,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.newdawn.slick.Image;
 import org.newdawn.slick.SlickException;
+import org.newdawn.slick.opengl.TextureLoader;
+import org.newdawn.slick.util.ResourceLoader;
 
 /**
  * Singleton for textures management.
@@ -31,7 +33,7 @@ public class TextureManager {
     
     public void addTexture(String name, String textureFileName) {
         try {
-            textures.put(name, new Image(textureFileName));
+            textures.put(name, new Image(TextureLoader.getTexture("PNG", ResourceLoader.getResource(textureFileName).openStream())));
         } catch (Exception ex) {
             Logger.getLogger(TextureManager.class.getName()).log(Level.SEVERE, "Texture not found: " + textureFileName);
         }
